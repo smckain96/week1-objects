@@ -1,0 +1,67 @@
+var numbers = {
+  10: 10,
+  num: 13,
+  anotherKey: 34,
+  undefined: 12,
+  blue: 98
+}
+
+———— FIND THE AVERAGE ————
+
+function average(obj){
+  var values = [];
+  var total = 0;
+  for(var key in obj){
+    values.push(obj[key])
+  }
+  for(var i= 0; i < values.length; i++){
+    total = total + values[i];
+  }
+  var avg = (total / values.length);
+  return avg;
+}
+average(numbers)
+
+———— PUSH VALUES INTO NEW ARRAY ————
+
+function newArray(obj){
+  var array = [];
+  for(var key in obj){
+    array.push(obj[key]);
+  }
+  return array;
+}
+newArray(numbers);
+
+———— SUBTRACT ODD FROM EVEN ————
+
+function oddFromEven(obj){
+  var evens = [];
+  var odds = [];
+  var total = 0;
+  for(var key in obj){
+    if(obj[key] % 2 === 0){
+      evens.push(obj[key]);
+    }else{
+      odds.push(obj[key]);
+    }
+  }
+  for(var i = 0; i < evens.length; i++){
+    var total = total + evens[i];
+    console.log(total)
+  }
+  var total2 = total - odds;
+  console.log(total2);
+}
+oddFromEven(numbers);
+
+———— MULTIPLY ALL VALUES BY 2 ————
+
+function multiplyByTwo(obj){
+  var objx2 = [];
+  for(var key in obj){
+    objx2.push(obj[key]*2);
+    console.log(objx2);
+  }
+}
+multiplyByTwo(numbers);
